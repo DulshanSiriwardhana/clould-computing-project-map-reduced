@@ -1,15 +1,14 @@
-#!/usr/bin/env python3
 import sys
 import csv
 
 reader = csv.reader(sys.stdin)
 try:
-    header = next(reader)  # Skip header
+    header = next(reader)
 except StopIteration:
-    sys.exit(0)  # empty input
+    sys.exit(0)
 
 for row in reader:
-    print("DEBUG row:", row, file=sys.stderr)  # print to stderr so it doesn't interfere with mapper output
+    print("DEBUG row:", row, file=sys.stderr)
     try:
         if len(row) < 5:
             continue

@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import sys
 
 current_popularity = None
@@ -9,7 +8,7 @@ for line in sys.stdin:
     try:
         popularity, followers = line.strip().split('\t')
         popularity = int(popularity)
-        followers = float(followers)  # <- correct here
+        followers = float(followers)
 
         if current_popularity == popularity:
             total_followers += followers
